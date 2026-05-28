@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Expense Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>💰 Smart Expense Dashboard</h1>
+
+  <!-- SUMMARY -->
+  <div class="summary">
+    <div class="card">
+      <h3>Balance</h3>
+      <p id="balance">₹0</p>
+    </div>
+
+    <div class="card income">
+      <h3>Income</h3>
+      <p id="income">₹0</p>
+    </div>
+
+    <div class="card expense">
+      <h3>Expense</h3>
+      <p id="expense">₹0</p>
+    </div>
+  </div>
+
+  <!-- FORM -->
+  <div class="form">
+    <input type="text" id="desc" placeholder="Description">
+    <input type="number" id="amount" placeholder="Amount">
+    <input type="date" id="date">
+
+    <select id="type">
+      <option value="income">Income</option>
+      <option value="expense">Expense</option>
+    </select>
+
+    <button onclick="addTransaction()">Add Transaction</button>
+  </div>
+
+  <!-- LIST -->
+  <h2>Transactions</h2>
+  <ul id="list"></ul>
+
+  <!-- GRAPH -->
+  <h2>📊 Monthly Expense Analysis</h2>
+  <canvas id="expenseChart"></canvas>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
